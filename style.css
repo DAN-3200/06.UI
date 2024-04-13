@@ -1,5 +1,16 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
 * {
   box-sizing: border-box;
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+* button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 body {
@@ -9,13 +20,16 @@ body {
   display: grid;
   place-items: center;
   background-color: #28282b;
+  grid-template-areas: "H";
 }
 
 box {
+  z-index: 3;
+  grid-area: H;
   width: 1080px;
   height: 640px;
   border-radius: 40px;
-  background-color: #FAF9F6;
+  background-color: #faf9f6;
   display: grid;
   grid-template-columns: 0.8fr 1.6fr;
   gap: 8px;
@@ -24,15 +38,144 @@ box {
   box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
 box main {
+  padding: 16px 8px;
   grid-area: M;
+  display: grid;
+  align-items: center;
+}
+box main .titleMain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+box main .titleMain h3 {
+  margin: 0;
+  font-weight: 640;
+  background-image: linear-gradient(90deg, royalblue 0%, #ffaa33 90%); /* Gradiente de laranja para vermelho */
+  -webkit-background-clip: text; /* Aplica o gradiente dentro do texto */
+  color: transparent; /* Torna o texto transparente para mostrar o gradiente por trás */
+}
+box main .titleMain p {
+  margin: 0;
+  font-weight: 640;
+  font-size: 32px;
+  color: #343434;
+}
+box main .extra {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+box main .extra div {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px;
+  border-radius: 4px;
+  justify-self: center;
+  background-color: #e5e4e2;
+}
+box main .extra button {
+  width: 40px;
+  height: 32px;
+  border-radius: 4px;
+  border: none;
+  font-size: 16px;
+  color: #343434;
+  transition: 0.2s;
+  cursor: pointer;
+  background-color: transparent;
+}
+box main .extra button:hover {
+  background-color: #faf9f6;
+}
+box main .extra span {
+  margin-top: 16px;
+  font-weight: 600;
+}
+box main .inputField {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+box main .inputField input[type=text],
+box main .inputField input[type=password] {
+  width: 296px;
+  height: 40px;
+  padding: 8px;
+  border-radius: 8px;
+  border: solid 2px transparent;
+  background-color: #e5e4e2;
+  outline: none;
+  transition: 0.2s;
+  font-weight: 600;
+}
+box main .inputField input[type=text]:focus,
+box main .inputField input[type=password]:focus {
+  transition: 0.3s;
+  border: 2px solid #ffaa33;
+}
+box main button.continue {
+  height: 40px;
+  width: 80%;
+  justify-self: center;
+  align-self: center;
+  border-radius: 8px;
+  border: none;
+  background-color: #ffaa33;
+  font-size: 16px;
+  color: white;
+  font-weight: 560;
+  cursor: pointer;
+}
+box main .adviceLogin {
+  align-self: center;
+  justify-self: center;
+}
+box main .adviceLogin a {
+  font-weight: 600;
 }
 box .overBanner {
+  background-color: rgba(0, 0, 0, 0.363);
+  padding: 24px;
   z-index: 3;
   grid-area: B;
   border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: #faf9f6;
+}
+box .overBanner h1 {
+  font-weight: 640;
+  font-size: 120px;
 }
 box .banner {
+  overflow: hidden;
   border-radius: 24px;
   background-color: #28282b;
   grid-area: B;
+}
+box .banner img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.background {
+  grid-area: H;
+  height: 100%;
+  width: 100%;
+  background-color: #6082b6;
+  background-image: url("wallpapersden.com_ai-magical-sunset-orange-x-blue_1952x1120.jpg");
+  background-size: cover;
+  filter: blur(2px);
 }/*# sourceMappingURL=style.css.map */

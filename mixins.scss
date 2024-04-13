@@ -1,0 +1,9 @@
+@mixin font-grad($color1, $color2) {
+	background-image: linear-gradient(
+		90deg,
+		$color1 0%,
+		$color2 90%
+	); /* Gradiente de laranja para vermelho */
+	-webkit-background-clip: text; /* Aplica o gradiente dentro do texto */
+	color: transparent; /* Torna o texto transparente para mostrar o gradiente por trás */
+}
