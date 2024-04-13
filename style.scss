@@ -1,0 +1,53 @@
+// - imports
+
+// - variable [8-pointGrid]
+$nMargin: 8px;
+$nPadding: 8px;
+$nRadius: 8px;
+
+$vColor-One: royalblue;
+$vColor-Two: #6082B6;
+$vDark: #28282b;
+$vWhite: #FAF9F6;
+
+// - stylization
+*{// Generalizações
+   box-sizing: border-box;
+}
+
+body{
+   height: 99vh;
+   padding: 0;
+   margin: 0;
+   display: grid;
+   place-items: center;
+   background-color: $vDark;
+}
+
+box{
+   width: 1080px;
+   height: 640px;
+   border-radius: $nRadius*5;
+   background-color: $vWhite;
+   display: grid;
+   grid-template-columns: 0.8fr 1.6fr;
+   gap: 8px;
+   grid-template-areas: "M B";
+   padding: $nPadding*2;
+   box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+
+   main{
+      grid-area: M;
+   }
+   .overBanner{
+      z-index: 3;
+      grid-area: B;
+      border-radius: $nRadius*3;
+   }
+   .banner{
+      border-radius: $nRadius*3;
+      background-color: $vDark;
+      grid-area: B;
+   }
+}
+
