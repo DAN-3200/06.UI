@@ -14,7 +14,7 @@
 }
 
 body {
-  height: 99vh;
+  height: 100vh;
   padding: 0;
   margin: 0;
   display: grid;
@@ -35,40 +35,39 @@ box {
   gap: 8px;
   grid-template-areas: "M B";
   padding: 16px;
-  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
-box main {
+box form.main {
   padding: 16px 8px;
   grid-area: M;
   display: grid;
   align-items: center;
 }
-box main .titleMain {
+box form.main .titleMain {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-box main .titleMain h3 {
+box form.main .titleMain h3 {
   margin: 0;
   font-weight: 640;
   background-image: linear-gradient(90deg, royalblue 0%, #ffaa33 90%); /* Gradiente de laranja para vermelho */
   -webkit-background-clip: text; /* Aplica o gradiente dentro do texto */
   color: transparent; /* Torna o texto transparente para mostrar o gradiente por trás */
 }
-box main .titleMain p {
+box form.main .titleMain p {
   margin: 0;
   font-weight: 640;
   font-size: 32px;
   color: #343434;
 }
-box main .extra {
+box form.main .extra {
   margin-top: 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-box main .extra div {
+box form.main .extra div {
   height: 40px;
   display: flex;
   align-items: center;
@@ -79,7 +78,7 @@ box main .extra div {
   justify-self: center;
   background-color: #e5e4e2;
 }
-box main .extra button {
+box form.main .extra button {
   width: 40px;
   height: 32px;
   border-radius: 4px;
@@ -90,22 +89,23 @@ box main .extra button {
   cursor: pointer;
   background-color: transparent;
 }
-box main .extra button:hover {
+box form.main .extra button:hover {
   background-color: #faf9f6;
 }
-box main .extra span {
+box form.main .extra span {
   margin-top: 16px;
   font-weight: 600;
 }
-box main .inputField {
+box form.main .inputField {
   margin-top: 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 8px;
 }
-box main .inputField input[type=text],
-box main .inputField input[type=password] {
+box form.main .inputField input[type=text],
+box form.main .inputField input[type=email],
+box form.main .inputField input[type=password] {
   width: 296px;
   height: 40px;
   padding: 8px;
@@ -116,12 +116,13 @@ box main .inputField input[type=password] {
   transition: 0.2s;
   font-weight: 600;
 }
-box main .inputField input[type=text]:focus,
-box main .inputField input[type=password]:focus {
+box form.main .inputField input[type=text]:focus,
+box form.main .inputField input[type=email]:focus,
+box form.main .inputField input[type=password]:focus {
   transition: 0.3s;
   border: 2px solid #ffaa33;
 }
-box main button.continue {
+box form.main button.continue {
   height: 40px;
   width: 80%;
   justify-self: center;
@@ -134,11 +135,11 @@ box main button.continue {
   font-weight: 560;
   cursor: pointer;
 }
-box main .adviceLogin {
+box form.main .adviceLogin {
   align-self: center;
   justify-self: center;
 }
-box main .adviceLogin a {
+box form.main .adviceLogin a {
   font-weight: 600;
 }
 box .overBanner {
@@ -177,5 +178,6 @@ box .banner img {
   background-color: #6082b6;
   background-image: url("wallpapersden.com_ai-magical-sunset-orange-x-blue_1952x1120.jpg");
   background-size: cover;
-  filter: blur(2px);
+  filter: blur(2.4px);
+  position: absolute;
 }/*# sourceMappingURL=style.css.map */

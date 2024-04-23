@@ -32,7 +32,7 @@ $vFont-Color: #343434;
 }
 
 body {
-	height: 99vh;
+	height: 100vh;
 	padding: 0;
 	margin: 0;
 	display: grid;
@@ -53,11 +53,11 @@ box {
 	gap: 8px;
 	grid-template-areas: 'M B';
 	padding: $nPadding * 2;
-	box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
-		rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
-		rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+	// box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+	// 	rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+	// 	rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 
-	main {
+	form.main {
 		padding: $nPadding * 2 $nPadding;
 		grid-area: M;
 		display: grid;
@@ -124,6 +124,7 @@ box {
 			gap: 8px;
 
 			input[type='text'],
+			input[type='email'],
 			input[type='password'] {
 				width: 296px;
 				height: 40px;
@@ -202,5 +203,6 @@ box {
 	background-color: #6082b6;
 	background-image: url('wallpapersden.com_ai-magical-sunset-orange-x-blue_1952x1120.jpg');
 	background-size: cover;
-	filter: blur(2px);
+	filter: blur(2.4px);
+	position: absolute;
 }
